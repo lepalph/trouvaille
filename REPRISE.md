@@ -83,7 +83,7 @@ Le code est une WebExtension standard. Pour Safari, il faudrait Xcode complet po
 ```sh
 npm install
 npx playwright install chromium
-npm test                 # 7 tests unitaires de la recherche
+npm test                 # 6 tests unitaires de la recherche
 SHOTS=1 npm run e2e      # 10 étapes sur le vrai YouTube, captures dans test/shots/
 HEADED=1 npm run e2e     # même test, navigateur visible
 ```

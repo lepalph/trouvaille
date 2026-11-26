@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Extension Chrome : chercher un mot dit dans une vidéo YouTube et y sauter.",
   "scripts": {
-    "test": "node --test",
+    "test": "node --test test/*.test.js",
     "e2e": "node test/e2e.mjs",
     "zip": "rm -f trouvaille.zip && zip -qr trouvaille.zip manifest.json src _locales icons README.md -x icons/icon-512.png"
   },
