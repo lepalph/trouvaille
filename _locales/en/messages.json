@@ -1,0 +1,5 @@
+{
+  "name": { "message": "Trouvaille" },
+  "description": { "message": "Search for any word spoken in a YouTube video and jump straight to the moment it's said." },
+  "actionTitle": { "message": "Search this video" }
+}

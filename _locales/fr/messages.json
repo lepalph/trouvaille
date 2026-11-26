@@ -1,0 +1,5 @@
+{
+  "name": { "message": "Trouvaille" },
+  "description": { "message": "Cherchez un mot dans ce qui est dit dans une vidéo YouTube et allez directement au moment où il est prononcé." },
+  "actionTitle": { "message": "Rechercher dans la vidéo" }
+}

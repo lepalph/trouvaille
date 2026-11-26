@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Syntaxe JS et JSON
+        run: |
+          for f in src/*.js; do node --check "$f"; done
+          for f in manifest.json _locales/*/messages.json; do jq empty "$f"; done
+      - name: Fichiers référencés par le manifest
+        run: jq -r '[.background.service_worker, .content_scripts[].js[], .icons[], .action.default_icon[]] | .[]' manifest.json | xargs ls
+      - run: npm test
+      # Le test de bout en bout (npm run e2e) reste local : YouTube bloque souvent les IP des runners.
+      - run: npm run zip
+      - uses: actions/upload-artifact@v7
+        with:
+          name: trouvaille
+          path: trouvaille.zip
