@@ -1,6 +1,6 @@
 # Reprendre Trouvaille
 
-Ce document s'adresse à la personne, ou à l'agent, qui reprend le code. Le [README](README.md) couvre l'installation et l'usage.
+Ce document s'adresse à la personne, ou à l'agent, qui reprend le code. Le [README](README.fr.md) couvre l'installation et l'usage.
 
 ## État au 26 novembre 2026 (v0.1.0)
 
